@@ -5,8 +5,10 @@
 
 ### D для новичка
 
-* [XinY] ["Выучить X за Y минут, где X=D"](examples/xiny)
+* ["Выучить X за Y минут, где X=D"][xiny]
 
 ### WIP
 
 Разделы помеченные как `WIP` находятся в разработке (Work In Progress)
+
+[xiny]: examples/xiny
