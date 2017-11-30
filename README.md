@@ -1,2 +1,9 @@
-# duseful
-Useful examples of D programming languange
+# duseful - Сборник простых рецептов и примеров кода на языке D
+
+* ## [D для новичка][1]
+* ## [D для програмиста на С++ (WIP)]
+
+
+### [1] D для новичка
+
+* [XinY] ["Выучить X за Y минут, где X=D"](examples/xiny)
