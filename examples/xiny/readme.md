@@ -278,4 +278,4 @@ void main()
 }
 ```
 
-Есть предложения улучшения? Нашёл ошибку? Создавай [issue](/issues/new)!
+Есть предложения улучшения? Нашёл ошибку? Создавай [issue](https://github.com/deviator/duseful/issues/new)!
