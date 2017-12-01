@@ -1,0 +1,3 @@
+name "helloworld" // обязательный параметр
+description "A minimal D example application" // не обязательный параметр
+targetPath "bin" // путь к выходному бинарному файлу, без указания dub будет класть рядом с dub.sdl
