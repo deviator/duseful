@@ -25,7 +25,7 @@ for item in some_list:
 ```
 ```d
 foreach(item; someList) {
-    writeln(item)
+    writeln(item);
 }
 ```
 
