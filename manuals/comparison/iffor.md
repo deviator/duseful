@@ -14,7 +14,7 @@ if 2 > 1:
 ```
 ```d
 if (2 > 1) {
-    writeln("2 greater than 1")
+    writeln("2 greater than 1");
 }
 ```
 
