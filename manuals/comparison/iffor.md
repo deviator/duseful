@@ -18,6 +18,15 @@ if (2 > 1) {
 }
 ```
 
+### Однострочный if
+
+```python
+result = 2 if 2 > 1 else 1
+```
+```d
+auto result = (2 > 1) ? 2 : 1;
+```
+
 ### foreach
 ```python
 for item in some_list:
@@ -29,7 +38,7 @@ foreach(item; someList) {
 }
 ```
 
-### foreach with indieces
+### foreach с индексацией
 ```python
 for i, item in enumerate(some_list):
     print(i, item)
@@ -51,7 +60,42 @@ while(true) {
 }
 ```
 
+### for range
+```python
+for i in range(10):
+    print(i)
+```
+```d
+import std.range : iota;
 
+foreach(i; iota(10)) {
+    writeln(i);
+}
+```
+Или
+```d
+for(auto i; i < 10; ++i) {
+    writeln(i);
+}
+```
+
+### list comprehension lazy
+```python
+double_list = (x * 2 for x in some_list)
+```
+```d
+import std.algorithm;
+auto doubledList = someList.map!(x => x * 2);
+```
+### list comprehension
+```python
+double_list = [x * 2 for x in some_list]
+```
+```d
+import std.algorithm;
+import std.array;
+auto doubledList = someList.map!(x => x * 2).array;
+```
 ## Java
 
 WIP
