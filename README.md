@@ -35,6 +35,7 @@
 ### на английском
 
 * [Официальный сайт языка](http://dlang.org)
+* [Кто уже использует D](https://dlang.org/orgs-using-d.html)
 * [Сборник полезных ссылок](https://github.com/zhaopuming/awesome-d)
 * [Тренды D на Github](https://github.com/trending?l=d)
 * [Репозиторий пакетов dub](http://code.dlang.org)
