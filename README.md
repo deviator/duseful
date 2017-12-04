@@ -23,11 +23,36 @@
 
 ## Полезные ссылки
 
+### на русском
+
+* [Группа в telegram](https://t.me/dlangru)
+* [Группа в vk](https://vk.com/vk_dlang)
+* [Hub на habrahabr](https://habrahabr.ru/hub/d/)
+* [LightHouse (блог о разработке на D)](https://lhs-blog.info/)
+* [Блог нашего друга (разное, D в том числе)](http://progcode.ru/)
+
+### на английском
+
+* [Официальный сайт языка](http://dlang.org)
+* [Сборник полезных ссылок](https://github.com/zhaopuming/awesome-d)
+* [Тренды D на Github](https://github.com/trending?l=d)
+* [Репозиторий пакетов dub](http://code.dlang.org)
+* [Примеры кода на RosettaCode](http://rosettacode.org/wiki/Category:D)
+* [subreddit on reddit](https://www.reddit.com/r/dlang/)
+
 ## Литература
 
 ### на русском
 
+* [Язык программирования D](https://www.ozon.ru/context/detail/id/14132948/)
+    
+    Хоть и старая, но, наверное лучшая книга по D
+
 ### на английском
+
+* [Вероятно самый полный перечень книг по D на английском](https://wiki.dlang.org/Books)
+
+---
 
 ### D для новичка
 
