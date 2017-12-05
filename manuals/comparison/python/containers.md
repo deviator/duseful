@@ -59,6 +59,15 @@ len(names)
 names.length
 ```
 
+### Индекс элемента
+```python
+names.index('Alex')
+```
+```d
+import std.algorithm;
+names.countUntil("Alex")
+```
+
 ## Dictionary (словарь или ассоциативный массив)
 
 ```python
