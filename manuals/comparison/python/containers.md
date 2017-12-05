@@ -10,7 +10,7 @@ my_list = [1, 2, 3, 4]
 ```d
 auto myArray = [1, 2, 3];
 ```
-### Конканация
+### Конкатенация
 ```python
 left_list + right_list
 ```
