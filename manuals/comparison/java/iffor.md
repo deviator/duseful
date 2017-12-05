@@ -2,7 +2,7 @@
 
 ### Оператор ветвления
 
-Синтаксис для оператора **if** что в Java, что в D будут идентичны:
+Синтаксис для оператора **if** что в Java, что в D будет идентичен:
 
 ```d
 int gender = 1;
@@ -26,7 +26,7 @@ int absval = val < 0 ? -val : val;
 
 ### Циклы for, while, do-while
 
-И **for**, **while**, **do-while** для Java-разработчика так же не вызовут вопросов:  
+И **for**, **while**, **do-while** для Java-разработчика не вызовут вопросов:  
 
 ```d
 for (int i = 0; i < 10; i++) {
@@ -51,7 +51,7 @@ do {
 
 ### Цикл foreach
 
-А вот в цикле **[foreach](https://tour.dlang.org/tour/ru/basics/foreach)** уже есть отличия, в Java делается следующим образом:
+А вот в цикле **[foreach](https://tour.dlang.org/tour/ru/basics/foreach)** уже есть отличия. К примеру, если в Java foreach будет так выглядеть:
 
 ```java
 String[] fruits = new String[] { "Orange", "Apple", "Pear", "Strawberry" };
@@ -61,7 +61,7 @@ for (String fruit : fruits) {
 }
 ```
 
-Так будет выглядет этот пример в D:
+То в D аналогичная задача будет реализована следующим образом:
 
 ```d
 auto fruits = [ "Orange", "Apple", "Pear", "Strawberry" ];
@@ -71,7 +71,7 @@ foreach (fruit; fruits) {
 }
 ```
 
-Так же можно получить индекс каждого элемента:
+Если вам нужен индекс, это не проблема, используем следующий вариант:
 
 ```d
 auto fruits = [ "Orange", "Apple", "Pear", "Strawberry" ];
@@ -84,7 +84,7 @@ foreach(i, fruit; fruits) {
 }
 ```
 
-Так же есть вариант с использованием диапазонов:
+Так можно пробегаться по диапазонам:
 
 ```d
 foreach (i; 0 .. 3) {
@@ -94,7 +94,7 @@ foreach (i; 0 .. 3) {
 }
 ```
 
-Так же в D есть цикл **foreach_reverse**, который пробегается по елементам в обратном порядке:
+D поддерживает цикл **foreach_reverse**, который пробегается по елементам в обратном порядке:
 
 ```d
 foreach_reverse (i; [1, 2, 3]) {
