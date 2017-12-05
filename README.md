@@ -21,6 +21,8 @@
 * [D для machine learning](#wip)
 * [D для скриптов](#wip)
 
+---
+
 ## Полезные ссылки
 
 ### на русском
@@ -40,7 +42,9 @@
 * [Тренды D на Github](https://github.com/trending?l=d)
 * [Репозиторий пакетов dub](http://code.dlang.org)
 * [Примеры кода на RosettaCode](http://rosettacode.org/wiki/Category:D)
-* [subreddit on reddit](https://www.reddit.com/r/dlang/)
+* [subreddit на reddit](https://www.reddit.com/r/dlang/)
+* [domain dlang.org на reddit](https://www.reddit.com/domain/dlang.org/)
+* [Онлайн компилятор](https://d.godbolt.org/)
 
 ## Литература
 
