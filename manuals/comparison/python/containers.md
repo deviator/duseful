@@ -65,7 +65,7 @@ names.index('Alex')
 ```
 ```d
 import std.algorithm;
-names.countUntil("Alex")
+names.countUntil("Alex");
 ```
 
 ## Dictionary (словарь или ассоциативный массив)
