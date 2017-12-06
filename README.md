@@ -32,6 +32,7 @@
 * [Hub на habrahabr](https://habrahabr.ru/hub/d/)
 * [LightHouse (блог о разработке на D)](https://lhs-blog.info/)
 * [Блог нашего друга (разное, D в том числе)](http://progcode.ru/)
+* [Блог о gamedev на D](http://dlanggamedev.blogspot.ru/)
 * [Документация на русском (15-ый год, есть изменения)](https://wiki.dlang.org/Reading_the_documentation_(in_Russian))
 
 ### на английском
