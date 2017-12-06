@@ -18,6 +18,14 @@ left_list + right_list
 leftArray ~ rightArray;
 ```
 
+### Добавление элемента
+```python
+names.append('Alex')
+```
+```d
+names ~= "Alex";
+```
+
 ### Проверка наличия элемента
 ```python
 'Alex' in names_list
@@ -70,10 +78,56 @@ names.countUntil("Alex");
 
 ## Dictionary (словарь или ассоциативный массив)
 
+### Декларация
 ```python
 point = {'x': 0.52, 'y': 42, 'z': 1.3}
 ```
 
 ```d
-auto myAssocArray = ["x": 0.52, "y": 42, "z": 1.3];
+auto point = ["x": 0.52, "y": 42, "z": 1.3];
+```
+
+### Итерация
+```python
+for key, value in my_dict.items():
+    pass
+for key, value in my_dict.keys():
+    pass
+for key, value in my_dict.items():
+    pass
+```
+
+```d
+foreach(key, value; myDict) {
+    // ...
+}
+foreach(key; myDict.keys) {
+    // ...
+}
+foreach(value; myDict.values) {
+    // ...
+}
+```
+### Добавление элемента
+```python
+my_dict[key] = value
+```
+```d
+myDict[key] = value;
+```
+
+### Проверка ключа
+```python
+key in my_dict
+```
+```d
+(key in MyDict) !is null;
+```
+
+### Удаление
+```python
+del my_dict['a']
+```
+```d
+myDict.remove("a");
 ```
