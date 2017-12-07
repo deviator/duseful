@@ -13,13 +13,12 @@
 
 ## D для чего?
 
-* [D для web](#wip)
-* [D для desktop](#wip)
-* [D для mobile](#wip)
-* [D для gamedev](#wip)
-* [D для IoT](#wip)
-* [D для machine learning](#wip)
-* [D для скриптов](#wip)
+* [D для web][web]
+* [D для desktop][desktop]
+* [D для mobile][mobile]
+* [D для gamedev][gamedev]
+* [D для IoT][iot]
+* [D для machine learning][ml]
 
 ---
 
@@ -70,6 +69,12 @@
 
 Work In Progress - в разработке
 
-[begin]: manuals/begin.md
-[xiny]: manuals/xiny.md
+[begin]:      manuals/begin.md
+[xiny]:       manuals/xiny.md
 [comparison]: manuals/comparison
+[web]:        manuals/web
+[desktop]:    manuals/desktop
+[mobile]:     manuals/mobile
+[gamedev]:    manuals/gamedev
+[iot]:        manuals/iot
+[ml]:         manuals/ml
