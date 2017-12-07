@@ -5,4 +5,8 @@
 
 Для компиляции под ARM Вам потребуется компилятор ldc (взять можно [тут](https://github.com/ldc-developers/ldc/releases)).
 
-TODO: описание настройки кросс-компиляции
+TODO: описание настройки кросс-компиляции ldc
+TODO: gdc тоже
+
+полезная либа
+https://bitbucket.org/timosi/minlibd/overview

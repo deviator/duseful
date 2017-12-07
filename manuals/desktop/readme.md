@@ -8,6 +8,8 @@
 
 ## CLI
 
+https://github.com/kotet/progress
+
 ## TUI
 
 ## GUI
