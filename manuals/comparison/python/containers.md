@@ -131,3 +131,64 @@ del my_dict['a']
 ```d
 myDict.remove("a");
 ```
+
+## Tuple (кортеж)
+
+### Декларация
+
+```python
+pair = x1, x2,
+```
+```d
+import std.typecons;
+auto pair = tuple(x1, x2);
+```
+
+### Передача кортежа как набора аргументов
+```python
+add(*pair)
+```
+
+```d
+import std.typecons;
+add(pair.expand);
+```
+
+### Получение значение по индексу
+```python
+x = (1, 2)[0]
+```
+```d
+import std.typecons;
+auto x = tuple(1, 2)[0];
+```
+
+Функционал кортежей в D скуднее чем в Python. Нельзя конкатенировать их, присваивать набору переменных значения кортежа. 
+Кортеж в D может быть именованым кортежем.
+
+```python
+from collections import namedtuple
+Point = namedtuple('Point', ['x', 'y'])
+point = Point(1, 2)
+```
+```d
+import std.typecons;
+alias Point = tuple!("x", "y");
+auto point = Point(1, 2);
+```
+Или
+```python
+from collections import namedtuple
+point = namedtuple('Point', ['x', 'y'])(1, 2)
+```
+```d
+import std.typecons;
+auto point = tuple!("x", "y")(1, 2);
+```
+Получение элемента по названию поля
+```python
+x = point.x
+```
+```d
+auto x = point.x;
+```
