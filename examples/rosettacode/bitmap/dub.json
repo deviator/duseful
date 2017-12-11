@@ -1,0 +1,19 @@
+﻿{
+	"name" : "bitmap",
+	"description" : "Пример растрового графического изображения в формате RGB",
+	"targetPath": "bin/",
+	"sourcePaths": ["."],
+	"importPaths": ["."],
+
+	"configurations": [
+		{
+			"name": "app",
+			"targetType": "executable",
+			"versions": ["bitmap_main"]
+		},
+		{
+			"name": "lib",
+			"targetType": "library"
+		}
+	]
+}
