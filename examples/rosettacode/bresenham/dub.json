@@ -1,0 +1,23 @@
+﻿{
+	"name" : "bresenham",
+	"description" : "Пример рисования линии при помощи алгоритма Брезенхэма",
+	"targetPath": "bin/",
+	"sourcePaths": ["."],
+	"importPaths": ["."],
+
+	"dependencies": {
+		"bitmap": {"path": "../bitmap/"}
+	},
+
+	"configurations": [
+		{
+			"name": "app",
+			"targetType": "executable",
+			"versions": ["bitmap_bresenhams_line_algorithm_main"]
+		},
+		{
+			"name": "lib",
+			"targetType": "library"
+		}
+	]
+}
