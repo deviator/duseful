@@ -1,0 +1,5 @@
+bin/
+*.a
+*.o
+dub.selections.json
+*.*~

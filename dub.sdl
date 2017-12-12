@@ -1,0 +1,11 @@
+name "duseful"
+description "Полезные примеры на D, описание особенностей языка"
+
+targetType "none"
+
+subPackage {
+    name "ghi"
+    targetPath "bin"
+    targetType "executable"
+    mainSourceFile "examples/onefile/ghi.d"
+}
