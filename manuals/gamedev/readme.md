@@ -7,4 +7,6 @@
 ## Игровые движки с отрытым исходным кодом
 
 * [Dagon](https://github.com/gecko0307/dagon)
+* [D биндинг для движка Godot](https://github.com/GodotNativeTools/godot-d) ([сайт движка](https://godotengine.org/))
 * [Dash (к сожалению заброшен)](https://github.com/Circular-Studios/Dash)
+
