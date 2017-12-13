@@ -1,0 +1,23 @@
+﻿{
+	"name" : "midpoint_circle",
+	"description" : "Пример рисования линии при помощи алгоритма Midpoint circle",
+	"targetPath": "bin/",
+	"sourcePaths": ["."],
+	"importPaths": ["."],
+
+	"dependencies": {
+		"bitmap": {"path": "../bitmap/"}
+	},
+
+	"configurations": [
+		{
+			"name": "app",
+			"targetType": "executable",
+			"versions": ["bitmap_midpoint_circle"]
+		},
+		{
+			"name": "lib",
+			"targetType": "library"
+		}
+	]
+}
