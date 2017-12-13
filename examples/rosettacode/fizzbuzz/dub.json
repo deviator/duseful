@@ -1,0 +1,8 @@
+﻿{
+	"name" : "fizzbuzz",
+	"description" : "Пример классической программы FizzBuzz",
+	"targetPath": "bin/",
+	"sourcePaths": ["."],
+	"importPaths": ["."],
+	"targetType": "executable"
+}
