@@ -57,7 +57,7 @@ import std.string;
 ```
 ```d
 import std.string;
-' Lorem '.stripLeft;
+" Lorem ".stripLeft;
 ```
 
 ## Удаление пробелов справа
@@ -66,5 +66,5 @@ import std.string;
 ```
 ```d
 import std.string;
-' Lorem '.stripRight;
+" Lorem ".stripRight;
 ```
