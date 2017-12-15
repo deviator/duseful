@@ -25,7 +25,7 @@
 
 [Скачать](https://dlang.org/download.html)
 
-[Инструкция](./install.md#dmd)
+[Инструкция](./install/)
 
 ### LDC
 
@@ -34,12 +34,12 @@
 [LLVM](https://ru.wikipedia.org/wiki/Low_Level_Virtual_Machine). Использование LLVM
 позволяет получать более оптимизированный код (самые быстрые D-программы компилируются
 ldc), а так же осуществлять сборку под различные архитектуры (x86, x86_64, ARM,
-PowerPC, MIPS и т.д.). Обычно последняя версия отстаёт от DMD на 1-2 месяца.
-Распостраняется в виде архива, нужно будет добавить его в `PATH`.
+PowerPC, MIPS и т.д.). *Обычно* последняя версия отстаёт от DMD на 1-2 месяца.
+Распостраняется в виде архива, нужно будет добавить его в `$PATH`.
 
 [Скачать](https://github.com/ldc-developers/ldc/releases)
 
-[Инструкция](./install.md#ldc)
+[Инструкция](./install/)
 
 ### GDC
 
@@ -51,7 +51,7 @@ Backend компилятора использует код gnu compiler collecti
 
 [Скачать](https://gdcproject.org/downloads)
 
-[Инструкция](./install.md#gdc)
+[Инструкция](./install/)
 
 ## Система сборки
 
@@ -59,7 +59,7 @@ Backend компилятора использует код gnu compiler collecti
 
 [Скачать](http://code.dlang.org/download)
 
-[Инструкция](./install.md#dub)
+[Инструкция](./install/)
 
 Так же dub является менеджером пакетов.
 
