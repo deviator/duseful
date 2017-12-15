@@ -12,19 +12,97 @@
 ## DMD
 
 ### Linux <a name="dmd-linux"></a>
+```
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+```
 
 ### Windows <a name="dmd-windows"></a>
-
+```
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+```
 ### MacOS <a name="dmd-macos"></a>
-
+```
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+```
 ## LDC
-
+```
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+```
 ### Linux <a name="ldc-linux"></a>
-
+```
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+```
 ### Windows <a name="ldc-windows"></a>
-
+```
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+```
 ### MacOS <a name="ldc-macos"></a>
-
+```
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+```
 ## GDC
 
 TODO
