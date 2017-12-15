@@ -1,17 +1,17 @@
 # Инструкции по установке и настройке
 
 * [DMD](#dmd)
-    + [Linux](#dmd-linux)
-    + [Windows](#dmd-windows)
-    + [MacOS](#dmd-macos)
+    + [Linux](#linux-)
+    + [Windows](#windows-)
+    + [MacOS](#macos-)
 * [LDC](#ldc)
-    + [Linux](#ldc-linux)
-    + [Windows](#ldc-windows)
-    + [MacOS](#ldc-macos)
+    + [Linux](#linux--1)
+    + [Windows](#windows--1)
+    + [MacOS](#macos--1)
 
 ## DMD
 
-### Linux <a name="dmd-linux"></a>
+### Linux
 ```
 |
 |
@@ -25,7 +25,7 @@
 |
 ```
 
-### Windows <a name="dmd-windows"></a>
+### Windows
 ```
 |
 |
@@ -38,7 +38,7 @@
 |
 |
 ```
-### MacOS <a name="dmd-macos"></a>
+### MacOS
 ```
 |
 |
@@ -64,7 +64,7 @@
 |
 |
 ```
-### Linux <a name="ldc-linux"></a>
+### Linux
 ```
 |
 |
@@ -77,7 +77,7 @@
 |
 |
 ```
-### Windows <a name="ldc-windows"></a>
+### Windows
 ```
 |
 |
@@ -90,7 +90,7 @@
 |
 |
 ```
-### MacOS <a name="ldc-macos"></a>
+### MacOS
 ```
 |
 |
