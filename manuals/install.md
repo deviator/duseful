@@ -1,13 +1,13 @@
 # Инструкции по установке и настройке
 
 * [DMD](#dmd)
-    + [Linux](#linux-)
-    + [Windows](#windows-)
-    + [MacOS](#macos-)
+    + [Linux](#linux)
+    + [Windows](#windows)
+    + [MacOS](#macos)
 * [LDC](#ldc)
-    + [Linux](#linux--1)
-    + [Windows](#windows--1)
-    + [MacOS](#macos--1)
+    + [Linux](#linux-1)
+    + [Windows](#windows-1)
+    + [MacOS](#macos-1)
 
 ## DMD
 
