@@ -3,3 +3,4 @@ bin/
 *.o
 dub.selections.json
 *.*~
+.*.swp
