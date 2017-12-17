@@ -7,8 +7,8 @@
 ## D для кого?
 
 * [D для новичка](#d-для-новичка)
-* [D для студента](#wip)
-* [D для учёного](#wip)
+* [D для студента][student]
+* [D для исследователя][researcher]
 * [D для программиста (D в сравнении с X)][comparison]
 
 ## D для чего?
@@ -79,3 +79,6 @@ Work In Progress - в разработке
 [gamedev]:    manuals/gamedev
 [iot]:        manuals/iot
 [ml]:         manuals/ml
+
+[student]:    manuals/student.md
+[researcher]: manuals/researcher.md

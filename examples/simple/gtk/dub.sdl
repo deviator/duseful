@@ -1,0 +1,5 @@
+name "gtkexample"
+targetPath "bin"
+description "Пример gui приложения на gtk"
+stringImportPaths "ui"
+dependency "gtk-d" version="~>3.7.3"

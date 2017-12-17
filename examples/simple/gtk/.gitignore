@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+gtkexample.so
+gtkexample.dylib
+gtkexample.dll
+gtkexample.a
+gtkexample.lib
+gtkexample-test-*
+*.exe
+*.o
+*.obj
+*.lst
+*.*~
