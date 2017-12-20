@@ -1,5 +1,5 @@
 # Строки
-Строки в D это иммутабельный массив char `immutable char[]`
+Строки в D это иммутабельный массив char `immutable char[]`.
 
 ## Декларация
 
@@ -26,12 +26,21 @@ mystr[1]
 mystr[1];
 ```
 
-## Количество символов
+## Количество байт
 ```python
-len(mystr)
+len('résumé'.encode())  # 8
 ```
 ```d
-mystr.length;
+"résumé".length;  // 8
+```
+
+## Количество символов (unicode points)
+```python
+len('résumé')  # 6
+```
+```d
+import std.uni;
+"résumé".count;  // 6
 ```
 
 ## Форматирование
@@ -67,4 +76,47 @@ import std.string;
 ```d
 import std.string;
 " Lorem ".stripRight;
+```
+
+## Массив из строки по разделителю
+```python
+'lorem ipsum'.split()
+```
+```d
+import std.array;
+"lorem ipsum".split;
+```
+
+## Объединение массива в строку
+```python
+' '.join(['lorem', 'ipsum'])
+```
+```d
+import std.array;
+["lorem", "ipsum"].join(" ");
+```
+## Проверка наличия подстроки
+```python
+'stack' in 'haystack'
+```
+```d
+import std.algorithm;
+"haystack".canFind("stack");
+```
+## Поиск подстроки
+```python
+'haystack'.find('ys')
+```
+```d
+import std.string;
+"haystack".indexOf("ys");
+```
+## Приведение строки в верхнему регистру
+```python
+'haystack'.upper();
+```
+```d
+import std.algorithm;
+import std.uni;
+"haystack".map!toUpper;
 ```
