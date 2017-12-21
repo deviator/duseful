@@ -27,5 +27,4 @@
         действием сил](../examples/simple/movemodel.d)
 * создание gui прилоежния
     + [простое gtk приложение](../examples/simple/gtk/)
-    + [gtkui](../examples/simple/gtkui)
 * отрисовка графиков (TODO)
