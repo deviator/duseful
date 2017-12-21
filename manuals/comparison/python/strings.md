@@ -116,7 +116,6 @@ import std.string;
 'haystack'.upper();
 ```
 ```d
-import std.algorithm;
-import std.uni;
-"haystack".map!toUpper;
+import std.string;
+"haystack".toUpper;
 ```
