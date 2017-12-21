@@ -1,5 +1,26 @@
+// имя пакета
 name "gtkexample"
+// имя папки, куда будут складываться результирующие бинарники
 targetPath "bin"
 description "Пример gui приложения на gtk"
+// путь, по которому компилятор может искать файлы для чтения файлов во время компиляции
 stringImportPaths "ui"
-dependency "gtk-d" version="~>3.7.3"
+// пример исполняемыми файлами (возможно так же собирать библиотеки)
+targetType "executable"
+
+// используется автоматический биндинг к gtk
+configuration "simple" {
+    // имя исполняемого файла
+    targetName "gtkexample_simple"
+    // значение версии, необходимо для директивы version(someIdentifier) в исходниках
+    versions "simple"
+    dependency "gtk-d" version="~>3.7.3"
+}
+
+// используется вспомогательная библиотека gtkui
+configuration "gtkui" {
+    targetName "gtkexample_gtkui"
+    versions "usegtkui"
+    // gtkui зависит от gtk-d, dub сам определит это исходя из dub файла библиотеки
+    dependency "gtkui" version="~>0.1.0"
+}

@@ -1,3 +1,7 @@
+// распостраняется до конца файла: если нет версии simple, то
+// код ниже не попадает в компиляцию
+version(simple):
+
 import std.stdio;
 import std.conv : text;
 
