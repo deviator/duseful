@@ -77,7 +77,7 @@ Work In Progress - в разработке
 
 [begin]:      manuals/begin.md
 [xiny]:       manuals/xiny.md
-[unobvious]:  manauls/unobvious
+[unobvious]:  manuals/unobvious
 [comparison]: manuals/comparison
 [web]:        manuals/web
 [desktop]:    manuals/desktop
