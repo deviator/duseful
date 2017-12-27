@@ -29,6 +29,7 @@
 * [Группа в telegram](https://t.me/dlangru)
 * [Группа в vk](https://vk.com/vk_dlang)
 * [Hub на habrahabr](https://habrahabr.ru/hub/d/)
+* [Сайт тов. Striver'а](http://striver00.ru/D/)
 * [LightHouse (блог о разработке на D)](https://lhs-blog.info/)
 * [Блог нашего друга (разное, D в том числе)](http://progcode.ru/)
 * [Блог о gamedev на D](http://dlanggamedev.blogspot.ru/)
@@ -54,6 +55,9 @@
 * [Язык программирования D](https://www.ozon.ru/context/detail/id/14132948/)
     
     Хоть и старая, но, наверное лучшая книга по D
+
+* [Перевод книги про шаблоны в D (pdf)](http://striver00.ru/D/files/%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D1%8B_D_ru.pdf)
+* [Перевод учебника по D (pdf)](http://striver00.ru/D/files/D-tutorialspoint_ru.pdf)
 
 ### на английском
 
