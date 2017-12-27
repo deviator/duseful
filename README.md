@@ -69,6 +69,7 @@
 
 * [С чего начать][begin]
 * ["Выучить X за Y минут, где X=D"][xiny]
+* [Подводные камни][unobvious]
 
 ### WIP
 
@@ -76,6 +77,7 @@ Work In Progress - в разработке
 
 [begin]:      manuals/begin.md
 [xiny]:       manuals/xiny.md
+[unobvious]:  manauls/unobvious
 [comparison]: manuals/comparison
 [web]:        manuals/web
 [desktop]:    manuals/desktop
