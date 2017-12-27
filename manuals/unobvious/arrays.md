@@ -51,4 +51,6 @@ b ~= 4;
 a = b; // явно обновляем переменную a, чтобы она указывала туда же что и b
 ```
 
+Для добавления к массиву без копирования можно использовать [assumeSafeAppend](https://dlang.org/library/object/assume_safe_append.html).
+
 [Пример на run.dlang.io](https://run.dlang.io/is/t88k7F)
