@@ -1,6 +1,6 @@
 /+ Пример работы через разделяемую глобальную очередь
 
-   см так же simpleglob.d
+   см так же glob.d и usestd.d
  +/
 import std.stdio;
 import core.thread;
@@ -10,24 +10,18 @@ class Model
 {
 private:
     float _value = 0.01f;
-    shared Queue!float queue;
 
     // эта очередь нужна только для быстрого прерывания вычислений algo
     shared Queue!bool done;
 
 public:
 
-    this(shared Queue!float queue, shared Queue!bool done)
+    this(shared Queue!bool done)
     {
-        this.queue = queue;
         this.done = done;
     }
 
-    void step()
-    {
-        _value = algo(_value);
-        queue.push(_value);
-    }
+    void step() { _value = algo(_value); }
 
     float value() const @property { return _value; }
 
@@ -67,7 +61,10 @@ void runModel(shared Queue!float queue, shared Queue!bool done)
 {
     auto model = new Model(queue, done);
     while (!done.length)
+    {
         model.step;
+        queue.push(model.value);
+    }
 }
 
 void main()

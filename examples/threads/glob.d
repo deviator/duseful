@@ -1,7 +1,7 @@
 /+ Пример работы через глобальный разделяемый объект
    старый подход, чреват усложнением программы
 
-   см так же simplequeue.d
+   см так же queue.d и usestd.d
  +/
 import std.stdio;
 import core.thread;
