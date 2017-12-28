@@ -52,10 +52,7 @@
 
 ### на русском
 
-* [Язык программирования D](https://www.ozon.ru/context/detail/id/14132948/)
-    
-    Хоть и старая, но, наверное лучшая книга по D
-
+* [Язык программирования D (хоть и старая, но, наверное лучшая книга по D)](https://www.ozon.ru/context/detail/id/14132948/)
 * [Перевод книги про шаблоны в D (pdf)](http://striver00.ru/D/files/%D0%A8%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D1%8B_D_ru.pdf)
 * [Перевод учебника по D (pdf)](http://striver00.ru/D/files/D-tutorialspoint_ru.pdf)
 
