@@ -48,7 +48,6 @@ auto add(int[] args ...) {
     return res;
 }
 ```
-
 ## Лямбды (анонимные функции)
 ```python
 lambda a: a * 2
@@ -68,3 +67,28 @@ import std.algorithm;
 );
 ```
 Последний вариант удобен при передаче лямбды с несколькими действиями
+
+## Переменное количество аргументов (разных типов)
+```python
+from typing import Callable
+def callee(age: int, name: string):
+    pass
+
+
+def caller(func: Callable, *args):
+    func(*args)
+    
+
+caller(callee, 134, "Torin")
+```
+```d
+auto caller(Args...)(void delegate(Args) dg, Args args...) {
+    dg(args);
+}
+
+caller!(int, string)(
+    (int age, string name){
+        // do smth
+    }, 134, "Torin"
+);
+```
