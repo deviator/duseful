@@ -16,10 +16,7 @@ private:
 
 public:
 
-    this(shared Queue!bool done)
-    {
-        this.done = done;
-    }
+    this(shared Queue!bool done) { this.done = done; }
 
     void step() { _value = algo(_value); }
 
