@@ -92,3 +92,74 @@ caller!(int, string)(
     }, 134, "Torin"
 );
 ```
+## Передача функции как аргумента другой функции
+```python
+from typing import Callable
+def process_callback(a: int, b: int) -> int:
+    return a + b
+    
+def process(callback: Callable[[int, int], int]):
+    # do smth...
+    callback(42, 37)
+    
+process(process_callback)
+```
+
+```d
+int process_callback(int a, int b){
+    return a + b;
+}
+
+auto process(int function(int, int) callback){
+    // do smth...
+    callback(42, 37);
+}
+
+process(&process_callback);
+```
+Или если пока не ясно какие типы будут использованы
+```python
+def process_callback():
+    pass
+    
+def process(callback):
+    # do smth...
+    callback()
+    
+process(process_callback)
+```
+```d
+auto process_callback(){
+    // do smth
+}
+
+auto process(R, T...)(R function(T) callback){
+    // do smth...
+    callback();
+}
+
+process(&process_callback);
+```
+Однако в D есть разница между функцией `funtcion` и делегатом `delegate`. По этой причиней не получится вызвать метод `process` с лямбда выражением `process(x => x * 2)`. Одно из отличий между ними - делегат имеет доступ к переменным, которые доступны в его области видимости. Если надо поддерживать оба типа методов можно сделать так.
+```d
+auto process(alias callback)(){
+    // do smth...
+    callback(42);
+}
+```
+Использование
+```d
+process!(&process_callback)();
+
+process!(x => x * 2)();
+
+process!((int x) { return x * 2})();
+```
+Синаксический сахар. В D если функция вызывается без аргументов, то скобки можно не ставить. То есть `getSmth()` то же самое что и `getSmth`. Таким образом вызывать `process` можно так.
+```d
+process!(&process_callback);
+
+process!(x => x * 2);
+
+process!((int x) { return x * 2});
+```
