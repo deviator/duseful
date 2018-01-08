@@ -82,7 +82,7 @@ def caller(func: Callable, *args):
 caller(callee, 134, "Torin")
 ```
 ```d
-auto caller(Args...)(void delegate(Args) dg, Args args...) {
+auto caller(Args...)(void delegate(Args) dg, Args args) {
     dg(args);
 }
 
@@ -140,6 +140,7 @@ auto process(R, T...)(R function(T) callback){
 
 process(&process_callback);
 ```
+## Функции и делегаты
 Однако в D есть разница между функцией `funtcion` и делегатом `delegate`. По этой причиней не получится вызвать метод `process` с лямбда выражением `process(x => x * 2)`. Одно из отличий между ними - делегат имеет доступ к переменным, которые доступны в его области видимости. Если надо поддерживать оба типа методов можно сделать так.
 ```d
 auto process(alias callback)(){
@@ -149,17 +150,32 @@ auto process(alias callback)(){
 ```
 Использование
 ```d
-process!(&process_callback)();
+process!(process_callback)();
 
 process!(x => x * 2)();
 
-process!((int x) { return x * 2})();
+process!((int x) { return x * 2; })();
 ```
 Синаксический сахар. В D если функция вызывается без аргументов, то скобки можно не ставить. То есть `getSmth()` то же самое что и `getSmth`. Таким образом вызывать `process` можно так.
 ```d
-process!(&process_callback);
+process!(process_callback);
 
 process!(x => x * 2);
 
-process!((int x) { return x * 2});
+process!((int x) { return x * 2; });
+```
+Если нужно передать неизвестное количество аргументов неизвестно типа для передаваемого метода. То декларация принимаего метода будет такой.
+```d
+auto process(alias callback, T...)(T args){
+    // do smth...
+    callback(args);
+}
+```
+Использование таким
+```d
+process!(process_callback);
+
+process!(x => x * 2)(3); // то же самое что и process!(x => x * 2, int)(3)
+
+process!((int x) { return x * 2; })(37); // то же самое что и process!((int x) { return x * 2; }, int)(37)
 ```
