@@ -109,6 +109,7 @@ class Point {
 Point.length;
 ```
 ## Свойства (@property)
+```python
 class Point:
     def __init__(self, x: int, y: int):
         self._x = x
@@ -182,9 +183,10 @@ class Point3d : Point2d {
     }
     auto z;
 }
+```
 
 ## Множественное наследование
-В D нет множественного наследования, если не обходимо добавить какой-то миксин в класс можно
+В D нет множественного наследования, если необходимо добавить какой-то миксин в класс можно
 воспользоваться конструкцией `mixin template`. Пример опирается на 2 класса, объявленные выше, `Point2D` и `Point3D`
 ```python
 class NameMixin:
@@ -214,7 +216,7 @@ mixin template NameMixin() {
     }
 }
 
-class NamedPoint3d(Point3d) {
+class NamedPoint3d : Point3d {
     mixin NameMixin;
 }
 ```
