@@ -5,3 +5,4 @@
 * [C++](./cpp)
 * [Java](./java)
 * [Python](./python)
+* [C# (LINQ) (en)](https://github.com/wilzbach/linq)
