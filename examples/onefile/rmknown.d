@@ -2,7 +2,7 @@
     name "rmknown"
     type "executable"
  +/
-/++ Удаляет строку из файла .ssh/known_hosts, если находит в ней
+/++ Удаляет строки из файла .ssh/known_hosts, если находит в них
     переданную программе строку (по замыслу это IP адрес, но может
     быть любая строка)
  +/
@@ -35,6 +35,7 @@ int main(string[] args)
     foreach (ln; src.byLine)
         if (!ln.canFind(IP))
             dst.write(ln);
+    dst.close();
 
     return 0;
 }
