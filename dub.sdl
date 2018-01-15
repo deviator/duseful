@@ -9,3 +9,10 @@ subPackage {
     targetType "executable"
     mainSourceFile "examples/onefile/ghi.d"
 }
+
+subPackage {
+    name "rmknown"
+    targetPath "bin"
+    targetType "executable"
+    mainSourceFile "examples/onefile/rmknown.d"
+}
