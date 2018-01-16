@@ -9,19 +9,29 @@
 ## CLI
 
 https://github.com/kotet/progress
+
 https://github.com/Dechcaudron/dli
+
 https://github.com/robik/consoled
+
 https://github.com/gizmomogwai/colored
+
 https://github.com/danyalzia/drlutil
 
 ## TUI
+
 https://github.com/vladdeSV/scone
+
 https://github.com/zyedidia/termbox-d
 
 ## GUI
 
 [Пример использования GTK](/examples/simple/gtk)
+
 https://github.com/buggins/dlangui
+
 https://github.com/nomad-software/tkd
+
 https://github.com/MrSmith33/anchovy
+
 https://github.com/BBasile/kheops
