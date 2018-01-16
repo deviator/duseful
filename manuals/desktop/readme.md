@@ -13,3 +13,5 @@ https://github.com/kotet/progress
 ## TUI
 
 ## GUI
+
+[Пример использования GTK](/examples/simple/gtk)
