@@ -2,16 +2,26 @@
 
 Разработка для desktop может быть условно разделена на следущие виды:
 
-* CLI -- command line interface -- программы-команды, принимающие ввод в виде параметров командной строки (компиляторы, утилиты), ответ выводят в виде текста
-* TUI -- text user interface -- приложения, работающие в консоли (vim, htop), используют для вывода информации текстовы интерфейс (псевдографику) интерактивно обновляя экран
-* GUI -- graphical user interface -- графические приложения (браузер, графический редактор и тд), используют для вывода информации графические возможности компьютера
+* [CLI](#cli) -- command line interface -- программы-команды, принимающие ввод в виде параметров командной строки (компиляторы, утилиты), ответ выводят в виде текста
+* [TUI](#tui) -- text user interface -- приложения, работающие в консоли (vim, htop), используют для вывода информации текстовы интерфейс (псевдографику) интерактивно обновляя экран
+* [GUI](#gui) -- graphical user interface -- графические приложения (браузер, графический редактор и тд), используют для вывода информации графические возможности компьютера
 
 ## CLI
 
 https://github.com/kotet/progress
+https://github.com/Dechcaudron/dli
+https://github.com/robik/consoled
+https://github.com/gizmomogwai/colored
+https://github.com/danyalzia/drlutil
 
 ## TUI
+https://github.com/vladdeSV/scone
+https://github.com/zyedidia/termbox-d
 
 ## GUI
 
 [Пример использования GTK](/examples/simple/gtk)
+https://github.com/buggins/dlangui
+https://github.com/nomad-software/tkd
+https://github.com/MrSmith33/anchovy
+https://github.com/BBasile/kheops
