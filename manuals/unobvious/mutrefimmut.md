@@ -53,7 +53,7 @@ immutable(char*) a;
 char * const a;
 ```
 
-`D`
+`D` (проверенно на linux dmd-2.078.0)
 
 ```d
 import std.stdio;
