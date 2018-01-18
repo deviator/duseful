@@ -28,10 +28,12 @@ https://github.com/zyedidia/termbox-d
 
 [Пример использования GTK](/examples/simple/gtk)
 
-https://github.com/buggins/dlangui
+[dlangui (нативный gui)](https://github.com/buggins/dlangui)
 
-https://github.com/nomad-software/tkd
+[Биндинг Tcl/Tk](https://github.com/nomad-software/tkd)
 
 https://github.com/MrSmith33/anchovy
 
-https://github.com/BBasile/kheops
+[kheops](https://github.com/BBasile/kheops) базируется на биндинге [cairo](https://cairographics.org/)
+
+[Биндинг QT и не только](https://github.com/MGWL/QtE5)
