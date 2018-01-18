@@ -34,7 +34,7 @@ int main(string[] args)
 
     foreach (ln; src.byLine)
         if (!ln.canFind(IP))
-            dst.write(ln);
+            dst.writeln(ln);
     dst.close();
 
     return 0;
