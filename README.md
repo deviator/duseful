@@ -73,7 +73,12 @@
 * ["Выучить X за Y минут, где X=D"][xiny]
 * [Подводные камни][unobvious]
 
-### WIP
+## ПО на D
+
+* [tilix](https://gnunn1.github.io/tilix-web/) - GNOME-like замена gnome-terminal ([интервью с разработчиком (en)](https://dlang.org/blog/2017/08/11/on-tilix-and-d-an-interview-with-gerald-nunn/))
+* [agilecommander](https://agilecommander.com/) - управление проектами
+* [OneDrive](https://github.com/skilion/onedrive) - свободный клиент OneDrive
+* [CAFE](https://github.com/aoitofu/CAFE) - видеоредактор
 
 Work In Progress - в разработке
 
