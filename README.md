@@ -79,6 +79,7 @@
 * [agilecommander](https://agilecommander.com/) - управление проектами
 * [OneDrive](https://github.com/skilion/onedrive) - свободный клиент OneDrive
 * [CAFE](https://github.com/aoitofu/CAFE) - видеоредактор
+* [RABCDAsm](https://github.com/CyberShadow/RABCDAsm) - Robust ABC (ActionScript Bytecode) [Dis-]Assembler
 * [flint](https://github.com/facebookarchive/flint) - Facebook's C++ linter (неактивен)
 * [warp](https://github.com/facebookarchive/warp) - Facebook's C and C++ Preprocessor (неактивен)
 
