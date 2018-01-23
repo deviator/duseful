@@ -81,6 +81,7 @@
 * [CAFE](https://github.com/aoitofu/CAFE) - видеоредактор
 * [RABCDAsm](https://github.com/CyberShadow/RABCDAsm) - Robust ABC (ActionScript Bytecode) [Dis-]Assembler
 * [клиент VKontakte](https://github.com/vk-cli/vk)
+* [Volta](https://github.com/VoltLang/Volta) - компилятор языка Volta
 * [flint](https://github.com/facebookarchive/flint) - Facebook's C++ linter (неактивен)
 * [warp](https://github.com/facebookarchive/warp) - Facebook's C and C++ Preprocessor (неактивен)
 
