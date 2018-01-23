@@ -85,8 +85,6 @@
 * [flint](https://github.com/facebookarchive/flint) - Facebook's C++ linter (неактивен)
 * [warp](https://github.com/facebookarchive/warp) - Facebook's C and C++ Preprocessor (неактивен)
 
-Work In Progress - в разработке
-
 [begin]:      manuals/begin.md
 [xiny]:       manuals/xiny.md
 [unobvious]:  manuals/unobvious
