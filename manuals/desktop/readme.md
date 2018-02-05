@@ -37,3 +37,7 @@ https://github.com/MrSmith33/anchovy
 [kheops](https://github.com/BBasile/kheops) базируется на биндинге [cairo](https://cairographics.org/)
 
 [Биндинг QT и не только](https://github.com/MGWL/QtE5)
+
+[биндинг libui](https://github.com/mogud/libuid)
+
+[биндинг nuklear](https://github.com/mogud/nukleard)
