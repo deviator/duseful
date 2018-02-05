@@ -1,6 +1,10 @@
 # D для web
 
-Для написания web приложений на D существет несколько фреймворков:
+### Библиотеки
+
+[Requests](https://github.com/ikod/dlang-requests) -- простая библиотека для работы с HTTP запросами
+
+### Фреймворки
 
 * [vibe.d](https://github.com/vibe-d/vibe.d)
 
