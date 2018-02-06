@@ -45,7 +45,7 @@
 * [Dlang Tour на английском](https://tour.dlang.org/tour/en/welcome/welcome-to-d)
 * [Кто уже использует D](https://dlang.org/orgs-using-d.html)
 * [Сборник полезных ссылок](https://github.com/zhaopuming/awesome-d)
-* [Тренды D на Github](https://github.com/trending?l=d)
+* [Тренды D на Github](https://github.com/trending/d)
 * [Репозиторий пакетов dub](http://code.dlang.org)
 * [Примеры кода на RosettaCode](http://rosettacode.org/wiki/Category:D)
 * [subreddit на reddit](https://www.reddit.com/r/dlang/)
