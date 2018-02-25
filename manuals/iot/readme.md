@@ -5,7 +5,8 @@
 
 ## Настройка компиляции под ARM для Raspberry PI (2, 3)
 
-Для компиляции под ARM потребуется компилятор ldc (взять можно [тут](https://github.com/ldc-developers/ldc/releases)).
+Рассмотрим компиляция для SoM с linux на борту.
+Для компиляции потребуется компилятор ldc (взять можно [тут](https://github.com/ldc-developers/ldc/releases)).
 
 ### Linux
 
@@ -42,7 +43,7 @@ ARMLIBDIR=arm-lib
 test -d $ARMLIBDIR || mkdir $ARMLIBDIR
 
 CC=/usr/bin/arm-linux-gnueabihf-gcc ldc-build-runtime -j8 \
-    --dFlags="-mtriple=armv7l-linux-gnueabihf;-disable-inlining;-mcpu=cortex-a8" \
+    --dFlags="-mtriple=armv7l-linux-gnueabihf;-disable-inlining;-mcpu=cortex-a7" \
     TARGET_SYSTEM="Linux;UNIX" BUILD_SHARED_LIBS=OFF && \
     cp ldc-build-runtime.tmp/lib/* $ARMLIBDIR/ && \
     echo "arm libraries copyed to $ARMLIBDIR dir"
@@ -51,7 +52,12 @@ CC=/usr/bin/arm-linux-gnueabihf-gcc ldc-build-runtime -j8 \
 Переменной `CC` должен быть присвоен путь к кросс-компилятору gcc.
 Вспомогательный скрипт `ldc-build-runtime` поставляется вместе с ldc,
 он упрощает сборку runtime'а под целевую платформу. `--dFlags` содержат
-параметры сборки (включая информацию о целевой платформе).
+параметры сборки, включая информацию о целевой платформе. В `-mtriple`
+первым идёт `armv7l`, что указывает набор 32-битных инструкций little
+endian. `gnueabihf` указывает на бинарный интерфейс linux с аппаратной
+поддержкой плавающей точки (`hf` -- `hard float`). `-mcpu` указывает на
+конкретное семейство процессоров (RPi2). `-disable-inlining` -- принудительно
+НЕ встраивать функции, что позволяет избежать некоторых специфичных ошибок.
 
 Вызывать этот скрипт необходимо один раз в начале работы над проектом и
 при обновлении ldc. Результирующие статические библиотеки кладутся в
@@ -61,7 +67,7 @@ CC=/usr/bin/arm-linux-gnueabihf-gcc ldc-build-runtime -j8 \
 
 ```
 #!/bin/bash
-ldc2 -mtriple=armv7l-linux-gnueabihf -mcpu=cortex-a8 -disable-inlining -L-L./arm-lib/ -gcc=arm-linux-gnueabihf-gcc $@
+ldc2 -mtriple=armv7l-linux-gnueabihf -mcpu=cortex-a7 -disable-inlining -L-L./arm-lib/ -gcc=arm-linux-gnueabihf-gcc $@
 ```
 
 Следует обратить внимание на параметры ldc: первая часть из них должна
@@ -77,6 +83,15 @@ ldc2 -mtriple=armv7l-linux-gnueabihf -mcpu=cortex-a8 -disable-inlining -L-L./arm
 Сборка под arm выполняется командой
 
     dub build --compiler=./armldc2
+    
+Существует способ компиляции через указание конфигурации ldc через переменную
+окружения `DFLAGS`, но такой способ не позволяет в `dub.sdl` указывать `platform`
+для параметров сборки. Так же можно настроить ldc только на сборку под arm, но
+это не особо практично, как мне кажется.
+    
+### Windows
+
+Если кто-то компилировал D из-под windows для rpi или bbb прошу поделиться опытом =)
 
 ## полезная либа
 https://bitbucket.org/timosi/minlibd/overview
