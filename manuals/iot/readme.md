@@ -3,10 +3,80 @@
 По бОльшей части IoT связан с разработкой под микроконтроллеры и энергоэфективные процессоры.
 На сегодняшний день в подавляющем большинстве это ARM архитектура (все распостранённые SoM).
 
-Для компиляции под ARM Вам потребуется компилятор ldc (взять можно [тут](https://github.com/ldc-developers/ldc/releases)).
+## Настройка компиляции под ARM для Raspberry PI (2, 3)
 
-TODO: описание настройки кросс-компиляции ldc
-TODO: gdc тоже
+Для компиляции под ARM потребуется компилятор ldc (взять можно [тут](https://github.com/ldc-developers/ldc/releases)).
 
-полезная либа
+### Linux
+
+#### Установка ldc
+
+Необходимо распаковать компилятор и выставить пути к его исполняемым
+файлам. Это можно сделать несколькими способами, например так:
+
+0. Создать в домашней директории папку `workspace/soft`
+0. Распаковать туда архив с ldc
+0. Перейти в директорию `workspace/soft` и создать символическую ссылку
+`ln -s ldc2-1.8.0-beta1-linux-x86_64 ldc2-cur`
+0. Уже используя `ldc2-cur` создать символические ссылки на исполняемые файлы и файлы стандартной библиотеки для импорта (`/usr/include/d/`)
+
+Такой подход подзволит обновлять ldc меняя только одну ссылку (`ldc2-cur`).
+
+#### Линковщик
+
+Т.к. ldc сам не умеет линковать, так же потребуется кросс-линковщик.
+Можно использовать набором утилит от gcc ([rpm](https://copr.fedorainfracloud.org/coprs/lantw44/arm-linux-gnueabihf-toolchain/), [deb](https://packages.debian.org/sid/gcc-arm-linux-gnueabihf)).
+
+#### Сборка
+
+Если проекта для кросс-компиляции пока нет можно проследовать
+[инстукции](/manuals/begin.md#Первые%20шаги) и создать пустой.
+
+Добавим скрипт `armbuildrtlibs.sh`:
+
+```
+#!/bin/bash
+
+ARMLIBDIR=arm-lib
+
+test -d $ARMLIBDIR || mkdir $ARMLIBDIR
+
+CC=/usr/bin/arm-linux-gnueabihf-gcc ldc-build-runtime -j8 \
+    --dFlags="-mtriple=armv7l-linux-gnueabihf;-disable-inlining;-mcpu=cortex-a8" \
+    TARGET_SYSTEM="Linux;UNIX" BUILD_SHARED_LIBS=OFF && \
+    cp ldc-build-runtime.tmp/lib/* $ARMLIBDIR/ && \
+    echo "arm libraries copyed to $ARMLIBDIR dir"
+```
+
+Переменной `CC` должен быть присвоен путь к кросс-компилятору gcc.
+Вспомогательный скрипт `ldc-build-runtime` поставляется вместе с ldc,
+он упрощает сборку runtime'а под целевую платформу. `--dFlags` содержат
+параметры сборки (включая информацию о целевой платформе).
+
+Вызывать этот скрипт необходимо один раз в начале работы над проектом и
+при обновлении ldc. Результирующие статические библиотеки кладутся в
+папку `arm-lib`.
+
+Добавим ещё один скрипт (`armldc2`):
+
+```
+#!/bin/bash
+ldc2 -mtriple=armv7l-linux-gnueabihf -mcpu=cortex-a8 -disable-inlining -L-L./arm-lib/ -gcc=arm-linux-gnueabihf-gcc $@
+```
+
+Следует обратить внимание на параметры ldc: первая часть из них должна
+совпадать с параметрами, с которыми собираются стандартная библиотека и
+рантайм (`-mtriple`, `-mcpu`, `-disable-inlining`), флаг `-L-L` добавляет
+путь поиска библиотек и нужно указать `arm-lib` т.к. именно в неё 
+копируются собранные `armbuildrtlibs.sh` библиотеки.
+
+Копирование библиотек позволяет исключить из системы контроля версий
+автоматически создаваемую папку `ldc-build-runtime.tmp`, при этом добавив
+сами библиотеки.
+
+Сборка под arm выполняется командой
+
+    dub build --compiler=./armldc2
+
+## полезная либа
 https://bitbucket.org/timosi/minlibd/overview
