@@ -42,6 +42,7 @@
 
 * [Официальный сайт языка](http://dlang.org)
 * [Онлайн компилятор](https://run.dlang.io/)
+* http://dplug.dpldocs.info/v6.0.22/dplug.html online документация пакетов dub: вместо `dplug` подставить нужный пакет, вместо `v6.0.22` нужную версию, без версии будет взят `~master`
 * [Dlang Tour на английском](https://tour.dlang.org/tour/en/welcome/welcome-to-d)
 * [Кто уже использует D](https://dlang.org/orgs-using-d.html)
 * [Сборник полезных ссылок](https://github.com/zhaopuming/awesome-d)
