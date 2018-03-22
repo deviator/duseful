@@ -5,4 +5,4 @@
 * [Строки](./strings.md)
 * [Функции](./functions.md)
 * [Классы](./classes.md)
-* [Модули](./)
+* [Модули](./modules.md)
