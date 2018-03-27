@@ -9,5 +9,6 @@
 * [Dagon](https://github.com/gecko0307/dagon)
 * [D биндинг для движка Godot](https://github.com/GodotNativeTools/godot-d) ([сайт движка](https://godotengine.org/))
 * [Эмулятор NES (порт с языка go)](https://github.com/blahness/nes)
+* [unecht](https://github.com/Extrawurst/unecht)
 * [Dash (к сожалению заброшен)](https://github.com/Circular-Studios/Dash)
 * [EncoXD (заброшен)](https://github.com/Naronco/EncoXD)
