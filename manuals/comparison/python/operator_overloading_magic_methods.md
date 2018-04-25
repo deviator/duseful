@@ -50,21 +50,21 @@ class Foo {
     T opBinaryRight(string op, T)(T lhs)
         if(op == "+")
     {
-        return lhs + дры;
+        return lhs + val;
     }
     
     // ... и так далее, подставляя вместо `+` нужный знак, однако можно воспользоваться кодогенерацией и сделать так.
     import std.algorithm; // импорт может быть глобальным.
 
     T opBinary(string op, T)(T rhs)
-        if(["+", "-", "*", "/", "%"].canFind(op))  // if после объявления шаблонного метода служит условием возможности выполнения этого метода
+        if(["+", "-", "*", "/", "%", "^^"].canFind(op))  // if после объявления шаблонного метода служит условием возможности выполнения этого метода
     {
         return mixin("val" ~ op ~ "rhs"); // mixin - аналог eval из python, но работает только во время компиляции.
     }
 
 
     T opBinaryRight(string op, T)(T lhs)
-        if(["+", "-", "*", "/", "%"].canFind(op))
+        if(["+", "-", "*", "/", "%", "^^"].canFind(op))
     {
         return mixin("lhs" ~ op ~ "val");
     }
