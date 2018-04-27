@@ -102,7 +102,7 @@ class Foo:
 ```
 ```d
 class Foo {
-    auto _arr = [];
+    auto _arr = ['a', 'b', 'c'];
     auto opIndex(size_t index) {
         return _arr[index];
     }
@@ -111,9 +111,9 @@ class Foo {
         _arr[index] = value;
     }
     
-    int opApply(int delegate(ref size_t val) dg) {
+    int opApply(int delegate(ref char val) dg) {
         int result = 0;
-        for (size_t i = 0; i < 5; ++i) {
+        foreach (ref elem; _arr) {
             result = dg(i);
             if (result) break;
         }
@@ -131,6 +131,30 @@ class Foo {
         if(op == "in")
     {
         return canFind(_arr, lhs);
+    }
+}
+```
+Перегрузка оператора среза (slice)
+```python
+class Foo:
+    def __init__(self):
+        self._arr = [1, 2, 3]
+
+    def __getitem__(self, slice_object: slice):
+        return self._arr[slice_object]
+
+    def __setitem__(self, slice_object: slice, value):
+        self._arr[slice_object] = value
+```
+```d
+class Foo {
+    auto _arr = ['a', 'b', 'c'];
+    auto opSlice(size_t from, size_t to) {
+        return _arr[from .. to]
+    }
+    
+    auto opSliceAssign(T)(T value, size_t from, size_t to) {
+        _arr[from .. to] = value;
     }
 }
 ```
