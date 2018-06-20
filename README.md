@@ -6,6 +6,15 @@
 создай issue если что-то из уже написанного непонятно или есть
 ошибка.
 
+---
+
+## FAQ
+
+* [Для тех кто в теме][faq]
+* [Для тех кто не в теме][noobfaq]
+
+---
+
 ## D для кого?
 
 * [D для новичка](#d-для-новичка)
@@ -99,3 +108,5 @@
 
 [student]:    manuals/student.md
 [researcher]: manuals/researcher.md
+[noobfaq]:    manuals/noobfaq.md
+[faq]:        manuals/faq.md
