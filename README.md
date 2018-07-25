@@ -39,6 +39,7 @@
 
 * [Группа в telegram](https://t.me/dlangru)
 * [Группа в vk](https://vk.com/vk_dlang)
+* [Лента новостей в vk](https://vk.com/dlang.news)
 * [Hub на habrahabr](https://habrahabr.ru/hub/d/)
 * [Сайт тов. Striver'а](http://striver00.ru/D/)
 * [Dlang Tour на русском](https://tour.dlang.org/tour/ru/welcome/welcome-to-d)

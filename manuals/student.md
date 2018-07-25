@@ -27,4 +27,8 @@
         действием сил](../examples/simple/movemodel.d)
 * создание gui прилоежния
     + [простое gtk приложение](../examples/simple/gtk/)
-* отрисовка графиков (TODO)
+* отрисовка графиков
+    + [ggplotd](https://github.com/BlackEdder/ggplotd)
+    + [plotd](https://github.com/BlackEdder/plotd)
+    + [plot2d](https://github.com/deviator/plot2d)
+    + [d-graphviz](https://github.com/ShigekiKarita/d-graphviz)
