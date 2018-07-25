@@ -28,6 +28,8 @@ https://github.com/zyedidia/termbox-d
 
 [Пример использования GTK](/examples/simple/gtk)
 
+[Информация по GTKD](gtk/readme.md)
+
 [dlangui (нативный gui)](https://github.com/buggins/dlangui)
 
 [Биндинг Tcl/Tk](https://github.com/nomad-software/tkd)
