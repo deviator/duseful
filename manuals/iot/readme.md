@@ -95,3 +95,6 @@ ldc2 -mtriple=armv7l-linux-gnueabihf -mcpu=cortex-a7 -disable-inlining -L-L./arm
 
 ## полезная либа
 https://bitbucket.org/timosi/minlibd/overview
+
+## полезная ссылка
+https://github.com/fkromer/d-on-embedded-linux-arm
