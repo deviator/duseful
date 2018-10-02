@@ -98,6 +98,7 @@
 
 ## Benchmarks
 
+* https://www.techempower.com/benchmarks/
 * https://github.com/frol/completely-unscientific-benchmarks
 * https://github.com/joakim-noah/regex-bench
 * https://github.com/kennyalive/DigitalWhip
