@@ -1,0 +1,2 @@
+#!/bin/bash
+$LDC $LDC_FLAGS $@

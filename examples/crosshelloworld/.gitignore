@@ -1,0 +1,12 @@
+*.swp
+*.swo
+*.obj
+*.a
+*.o
+__test__*__
+*.def
+*.log
+
+.dpack
+build-*/*
+.ldc-rt

@@ -1,0 +1,10 @@
+name "chw"
+description "Cross Hello World"
+license "MIT"
+
+targetType "executable"
+targetPath "$TP"
+
+dependency "vibe-d" version="~>0.8.4"
+dependency "vibe-d:tls" version="~>0.8.4"
+subConfiguration "vibe-d:tls" "openssl-1.1"
