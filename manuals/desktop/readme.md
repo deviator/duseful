@@ -12,6 +12,8 @@ https://github.com/kotet/progress
 
 https://github.com/Dechcaudron/dli
 
+https://github.com/seeseemelk/cli-d
+
 https://github.com/robik/consoled
 
 https://github.com/gizmomogwai/colored
