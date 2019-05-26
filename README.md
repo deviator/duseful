@@ -62,6 +62,7 @@
 * [subreddit на reddit](https://www.reddit.com/r/dlang/)
 * [domain dlang.org на reddit](https://www.reddit.com/domain/dlang.org/)
 * [Онлайн компилятор](https://d.godbolt.org/)
+* <https://garden.dlang.io/>
 
 ## Литература
 
