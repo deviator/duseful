@@ -34,6 +34,8 @@ https://github.com/zyedidia/termbox-d
 
 [dlangui (нативный gui)](https://github.com/buggins/dlangui)
 
+[форк dlangui](https://github.com/dayllenger/beamui)
+
 [Биндинг Tcl/Tk](https://github.com/nomad-software/tkd)
 
 https://github.com/MrSmith33/anchovy
