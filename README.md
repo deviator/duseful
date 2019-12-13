@@ -30,6 +30,7 @@
 * [D для gamedev][gamedev]
 * [D для IoT][iot]
 * [D для machine learning][ml]
+* [Кросскомпиляция][cross]
 
 ---
 
@@ -117,6 +118,8 @@
 [gamedev]:    manuals/gamedev
 [iot]:        manuals/iot
 [ml]:         manuals/ml
+
+[cross]:      manuals/crosscompile/
 
 [student]:    manuals/student.md
 [researcher]: manuals/researcher.md
