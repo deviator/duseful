@@ -5,115 +5,29 @@
 
 ## Настройка компиляции под ARM для Raspberry PI (2, 3), beaglebone, etc
 
-Рассмотрим компиляция для SoM с linux на борту.
+С выходом ldc `1.18.0` кросскомпиляция стала достаточно простой и описана [здесь](../crosscompile/).
 
-### Docker
+Поскольку расскатривается ситуация с linux на борту устройства особых ограничений на структуру проекта нет.
+Если проекта пока нет можно проследовать [инструкции](/manuals/begin.md#Первые-шаги) и создать пустой.
 
-Самый удобный способ -- работать через docker, так как это фиксированное окружение. 
+## полезные библиотеки
 
-### Структура проекта
+* [serialport](https://github.com/deviator/serialport) -- библиотека для работы с последовательным портом
+* [modbus](https://github.com/deviator/modbus) -- реализация протокола [Modbus](https://ru.wikipedia.org/wiki/Modbus) (master и slave)
+* [mosquittod](https://github.com/deviator/mosquittod) -- биндинг к библиотеке [mosquitto](https://mosquitto.org/), реализующей протокол MQTT
+* [vibe-mqtt](https://github.com/tchaloupka/vibe-mqtt) -- реализация сервера MQTT на D
+* [sdutil](https://github.com/deviator/sdutil) -- биндинг к `libsystemd.so`, позволяет удобно писать systemd сервисы
+* [protobuf](https://github.com/dcarp/protobuf-d) -- реализация плагина для компилятора protobuf (только для `proto3`)
 
-Предлагаемая структура не является единственно верной, просто вариант из личного опыта, 
-который кажется самым гибким и удобным. Всегда рад новой информации, если что-то можно
-упроситить или сделать "более правильно", пиши в issues :)
+## Без linux
 
-```
-.
-├── docker-ctx/
-|   ├── Dockerfile
-|   └── entry.sh
-├── dub.sdl
-├── ldc
-├── makefile
-└── source
-    └── app.d
-```
+D достаточно плотно интегрирован со своим runtime, но всё равно runtime можно выпилить и собирать код
+под чистое железо без ОС.
 
-#### Установка ldc
+Ссылки по теме:
 
-Необходимо распаковать компилятор и выставить пути к его исполняемым
-файлам. Это можно сделать несколькими способами, например так:
+* https://wiki.dlang.org/Bare_Metal_ARM_Cortex-M_GDC_Cross_Compiler
+* https://wiki.dlang.org/Minimal_semihosted_ARM_Cortex-M_%22Hello_World%22
+* https://forum.dlang.org/thread/qzrbbjgjwmgbyxukqpay@forum.dlang.org
+* https://bitbucket.org/timosi/minlibd/overview
 
-1. Создать в домашней директории папку `workspace/soft`
-2. Распаковать туда архив с ldc
-3. Перейти в директорию `workspace/soft` и создать символическую ссылку
-`ln -s ldc2-1.8.0-beta1-linux-x86_64 ldc2-cur`
-1. Уже используя `ldc2-cur` создать символические ссылки на исполняемые файлы и файлы стандартной библиотеки для импорта (`/usr/include/d/`)
-
-Такой подход подзволит обновлять ldc меняя только одну ссылку (`ldc2-cur`).
-
-#### Линковщик
-
-Т.к. ldc сам не умеет линковать, так же потребуется кросс-линковщик.
-Можно использовать набором утилит от gcc ([rpm](https://copr.fedorainfracloud.org/coprs/lantw44/arm-linux-gnueabihf-toolchain/), [deb](https://packages.debian.org/sid/gcc-arm-linux-gnueabihf)).
-
-#### Сборка
-
-Если проекта для кросс-компиляции пока нет можно проследовать
-[инструкции](/manuals/begin.md#Первые-шаги) и создать пустой.
-
-Добавим скрипт `armbuildrtlibs.sh`:
-
-```
-#!/bin/bash
-
-ARMLIBDIR=arm-lib
-
-test -d $ARMLIBDIR || mkdir $ARMLIBDIR
-
-CC=/usr/bin/arm-linux-gnueabihf-gcc ldc-build-runtime -j8 \
-    --dFlags="-mtriple=armv7l-linux-gnueabihf;-disable-inlining;-mcpu=cortex-a7" \
-    TARGET_SYSTEM="Linux;UNIX" BUILD_SHARED_LIBS=OFF && \
-    cp ldc-build-runtime.tmp/lib/* $ARMLIBDIR/ && \
-    echo "arm libraries copyed to $ARMLIBDIR dir"
-```
-
-Переменной `CC` должен быть присвоен путь к кросс-компилятору gcc.
-Вспомогательный скрипт `ldc-build-runtime` поставляется вместе с ldc,
-он упрощает сборку runtime'а под целевую платформу. `--dFlags` содержат
-параметры сборки, включая информацию о целевой платформе. В `-mtriple`
-первым идёт `armv7l`, что указывает набор 32-битных инструкций little
-endian. `gnueabihf` указывает на бинарный интерфейс linux с аппаратной
-поддержкой плавающей точки (`hf` -- `hard float`). `-mcpu` указывает на
-конкретное семейство процессоров (RPi2). `-disable-inlining` -- принудительно
-НЕ встраивать функции, что позволяет избежать некоторых специфичных ошибок.
-
-Вызывать этот скрипт необходимо один раз в начале работы над проектом и
-при обновлении ldc. Результирующие статические библиотеки кладутся в
-папку `arm-lib`.
-
-Добавим ещё один скрипт (`armldc2`):
-
-```
-#!/bin/bash
-ldc2 -mtriple=armv7l-linux-gnueabihf -mcpu=cortex-a7 -disable-inlining -L-L./arm-lib/ -gcc=arm-linux-gnueabihf-gcc $@
-```
-
-Следует обратить внимание на параметры ldc: первая часть из них должна
-совпадать с параметрами, с которыми собираются стандартная библиотека и
-рантайм (`-mtriple`, `-mcpu`, `-disable-inlining`), флаг `-L-L` добавляет
-путь поиска библиотек и нужно указать `arm-lib` т.к. именно в неё 
-копируются собранные `armbuildrtlibs.sh` библиотеки.
-
-Копирование библиотек позволяет исключить из системы контроля версий
-автоматически создаваемую папку `ldc-build-runtime.tmp`, при этом добавив
-сами библиотеки.
-
-Сборка под arm выполняется командой
-
-    dub build --compiler=./armldc2
-    
-Существует способ компиляции через указание конфигурации ldc через переменную
-окружения `DFLAGS`, но такой способ не позволяет в `dub.sdl` указывать `platform`
-для параметров сборки. Так же можно настроить ldc только на сборку под arm, но
-это не особо практично, как мне кажется.
-    
-### Windows
-
-Если кто-то компилировал D из-под windows для rpi или bbb прошу поделиться опытом =)
-
-## полезная либа
-https://bitbucket.org/timosi/minlibd/overview
-
-## полезная ссылка
-https://github.com/fkromer/d-on-embedded-linux-arm
