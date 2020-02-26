@@ -30,4 +30,4 @@ D достаточно плотно интегрирован со своим run
 * https://wiki.dlang.org/Minimal_semihosted_ARM_Cortex-M_%22Hello_World%22
 * https://forum.dlang.org/thread/qzrbbjgjwmgbyxukqpay@forum.dlang.org
 * https://bitbucket.org/timosi/minlibd/overview
-
+* https://github.com/denizzzka/d_c_arm_test/

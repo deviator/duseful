@@ -102,12 +102,7 @@
 
 ## Benchmarks
 
-* https://www.techempower.com/benchmarks/
-* https://github.com/frol/completely-unscientific-benchmarks
-* https://github.com/joakim-noah/regex-bench
-* https://github.com/kennyalive/DigitalWhip
-* https://github.com/kostya/benchmarks
-* https://habr.com/post/261201/
+[см faq][noobfaq] раздел Benchmarks
 
 [begin]:      manuals/begin.md
 [xiny]:       manuals/xiny.md
