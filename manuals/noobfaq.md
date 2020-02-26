@@ -82,7 +82,6 @@ utf-16 `wstring` и utf-32 `dstring`. В стандартной библиоте
 
 * https://www.techempower.com/benchmarks/
 * https://github.com/frol/completely-unscientific-benchmarks
-* https://github.com/joakim-noah/regex-bench
 * https://github.com/kennyalive/DigitalWhip
 * https://github.com/kostya/benchmarks
 * https://habr.com/post/261201/
@@ -90,3 +89,14 @@ utf-16 `wstring` и utf-32 `dstring`. В стандартной библиоте
 ## Насколько сложна декомпиляция кода написанного на D?
 
 D не C#, сложность декомпиляции сопоставима со сложностью декомпиляции C++.
+
+## Инструменты
+
+Для vs-code есть:
+
+* [code-d](https://marketplace.visualstudio.com/items?itemName=webfreak.code-d)
+* [vscode-dls](https://marketplace.visualstudio.com/items?itemName=LaurentTreguier.vscode-dls)
+
+Для Visual Studio есть [visual-d](https://github.com/dlang/visuald).
+
+Так же gdb работает с dlang.
