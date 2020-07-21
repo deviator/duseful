@@ -163,6 +163,7 @@ utf-16 `wstring` и utf-32 `dstring`. В стандартной библиоте
 * https://github.com/kennyalive/DigitalWhip
 * https://github.com/kostya/benchmarks
 * https://habr.com/post/261201/
+* https://github.com/nordlow/compiler-benchmark
 
 ## Насколько сложна декомпиляция кода написанного на D?
 
