@@ -32,4 +32,7 @@ extern(C) int somefunc(Foo*, int);
 
 Использование этих библиотек описано в их `README.md`.
 
-Так же существуют проекты, позволяющие использовать C/С++ библиотеки прямо из D кода [dpp](https://code.dlang.org/packages/dpp) (препроцессинг исходников и кодогенерация) и [calypso](https://github.com/Syniurge/Calypso) (совмещение на уровне ast компилятора).
+Так же существуют проекты, позволяющие использовать C/С++ библиотеки прямо из D
+кода [dpp](https://code.dlang.org/packages/dpp) (препроцессинг исходников и
+кодогенерация) и [calypso](https://github.com/Syniurge/Calypso)
+(совмещение на уровне ast компилятора).
