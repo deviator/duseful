@@ -18,6 +18,8 @@ https://github.com/DerelictOrg/DerelictCL
 
 https://github.com/eBay/tsv-utils/
 
+https://github.com/blachlylab/intervaltree
+
 ### Вычислительная биология и биоинформатика
 
 https://code.dlang.org/packages/biod
