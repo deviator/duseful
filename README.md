@@ -63,6 +63,7 @@
 * [domain dlang.org на reddit](https://www.reddit.com/domain/dlang.org/)
 * [Онлайн компилятор](https://d.godbolt.org/)
 * <https://garden.dlang.io/>
+* [Introduction to programming with compile time sequences in D](https://gist.github.com/dataPulverizer/67193772c52e7bd0a16414cb01ae4250)
 
 ## Литература
 
