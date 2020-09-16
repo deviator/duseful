@@ -96,3 +96,83 @@
 Стоит отметить что dub будет скачивать зависимости проекта в
 docker-контейнер. Чтобы использовать директорию из системы
 нужно её прокинуть в контейнер флагом `-v /home/user/.dub/:/root/.dub`.
+
+## Из chroot-окружения
+
+Внимание - при работе с chroot-окружением следует быть внимательней, поскольку окружению предоставлены права суперпользователя и доступ к процессам и устройствам основной системы.
+
+Все последующие действия производились с использованием утилиты `debootstrap`, присутствующей для многих дистрибутивов(Debian, Ubuntu, Archlinux, etc..).
+Настроить и войти в chroot-окружение:
+
+```text
+# debootstrap stretch ./stretch http://mirror.yandex.ru/debian
+# mount -t proc /proc proc/
+# mount --rbind /sys sys/
+# mount --rbind /dev dev/
+# chroot ./stretch /bin/bash
+# apt install build-essential cmake gcc-arm-linux-gnueabihf gcc-aarch64-linux-gnu
+```
+
+Дистрибутив stretch выбран поскольку в репозитории уже включены все необходимые пакеты и версия glibc относительно старая.
+
+Скачать и распаковать архив с исходным кодом ldc отсюда: https://github.com/ldc-developers/ldc/releases. В моем случае - `ldc-1.23.0-src.zip` распаковываю в `/root` окружения. Если утилите `ldc-build-runtime` указать аргумент `--dFlags /root/ldc-1.23.0-src/`, то данный шаг позволит избежать повторного скачивания этого архива в случае сборки стандартной библиотеки для нескольких архитектур.
+
+Для компиляции:
+
+ARM:
+
+```text
+# CC=arm-linux-gnueabihf-gcc ldc-build-runtime -j8 \
+                               --dFlags="-mtriple=armv7l-linux-gnueabihf" \
+                               --buildDir=/tmp/arm-rt \
+                               --targetSystem="Linux;UNIX" \
+                               --ldcSrcDir=/root/ldc-1.23.0-src/
+# cp -r /tmp/arm-rt/lib/ /root/dlang/ldc-1.23.0/arm-lib
+```
+
+ARM64:
+
+```text
+# CC=aarch64-linux-gnu-gcc ldc-build-runtime -j8 \
+                             --dFlags="-mtriple=aarch64-linux-gnu" \
+			     --buildDir=/tmp/aarch64-rt \
+			     --targetSystem="Linux;UNIX" \
+			     --ldcSrcDir=/root/ldc-1.23.0-src/
+# cp -r /tmp/aarch64-rt/lib/ /root/dlang/ldc-1.23.0/aarch64-lib
+```
+
+Добавляем в ldc2.conf:
+
+```text
+"^aarch64-.*-linux-gnu":
+{
+    switches = [
+        "-defaultlib=phobos2-ldc,druntime-ldc",
+        "-gcc=aarch64-linux-gnu-gcc",
+    ];
+    lib-dirs = [
+        "%%ldcbinarypath%%/../aarch64-lib",
+    ];
+    rpath = "%%ldcbinarypath%%/../aarch64-lib";
+};
+
+"^armv7l.*-linux-gnueabihf$":
+{
+    switches = [
+        "-defaultlib=phobos2-ldc,druntime-ldc",
+        "-gcc=arm-linux-gnueabihf-gcc",
+    ];
+    lib-dirs = [
+        "%%ldcbinarypath%%/../arm-lib",
+    ];
+    rpath = "%%ldcbinarypath%%/../arm-lib";
+};
+```
+
+Все готово. Сборка проекта для разных архитектур:
+
+```text
+# dub build --arch=armv7l-linux-gnueabihf
+# dub build --arch=aarch64-linux-gnu
+```
+
