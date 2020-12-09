@@ -159,6 +159,7 @@ utf-16 `wstring` и utf-32 `dstring`. В стандартной библиоте
 
 ## Benchmarks
 
+* https://github.com/tchaloupka/httpbench
 * https://github.com/typohnebild/numpy-vs-mir
 * https://www.techempower.com/benchmarks/
 * https://github.com/frol/completely-unscientific-benchmarks
