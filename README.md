@@ -91,9 +91,10 @@
 
 * [tilix](https://gnunn1.github.io/tilix-web/) - GNOME-like замена gnome-terminal ([интервью с разработчиком](http://progcode.ru/2017/08/25/%D0%BE-tilix-%D0%B8-d-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B2%D1%8C%D1%8E-%D1%81-%D0%B3%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%B4%D0%BE%D0%BC-%D0%BD%D0%B0%D0%BD%D0%BD%D0%BE%D0%BC/) [оригинал (en)](https://dlang.org/blog/2017/08/11/on-tilix-and-d-an-interview-with-gerald-nunn/))
 * [SILQ](https://github.com/eth-sri/silq) - высокоуровневый язык программирования для квантовых компьютеров
+* [OneDrive](https://github.com/skilion/onedrive) - свободный клиент OneDrive
+* [AppStream generator](https://github.com/ximion/appstream-generator) - генератор метаданных AppSteram
 * [agilecommander](https://agilecommander.com/) - управление проектами ([анонс на форуме](https://forum.dlang.org/post/gpkoabfoamstnbmysufg@forum.dlang.org))
 * [Novelate](https://github.com/Novelate/NovelateEngine) - программа для создания визуальных новел
-* [OneDrive](https://github.com/skilion/onedrive) - свободный клиент OneDrive
 * [CAFE](https://github.com/Ray-zu/CAFE) - видеоредактор
 * [RABCDAsm](https://github.com/CyberShadow/RABCDAsm) - Robust ABC (ActionScript Bytecode) [Dis-]Assembler
 * [клиент VKontakte](https://github.com/vk-cli/vk)
