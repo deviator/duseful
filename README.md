@@ -86,6 +86,7 @@
 * [С чего начать][begin]
 * ["Выучить X за Y минут, где X=D"][xiny]
 * [Подводные камни][unobvious]
+* [Системы сборки][buildsystems]
 
 ## ПО на D
 
@@ -108,16 +109,17 @@
 
 [см faq][noobfaq] раздел Benchmarks
 
-[begin]:      manuals/begin.md
-[xiny]:       manuals/xiny.md
-[unobvious]:  manuals/unobvious
-[comparison]: manuals/comparison
-[web]:        manuals/web
-[desktop]:    manuals/desktop
-[mobile]:     manuals/mobile
-[gamedev]:    manuals/gamedev
-[iot]:        manuals/iot
-[ml]:         manuals/ml
+[begin]:        manuals/begin.md
+[xiny]:         manuals/xiny.md
+[unobvious]:    manuals/unobvious
+[comparison]:   manuals/comparison
+[web]:          manuals/web
+[desktop]:      manuals/desktop
+[mobile]:       manuals/mobile
+[gamedev]:      manuals/gamedev
+[iot]:          manuals/iot
+[ml]:           manuals/ml
+[buildsystems]: manuals/buildsystems
 
 [cross]:      manuals/crosscompile/
 
