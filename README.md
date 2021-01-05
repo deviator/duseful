@@ -77,6 +77,7 @@
 ### на английском
 
 * [Вероятно самый полный перечень книг по D на английском](https://wiki.dlang.org/Books)
+* [D для программиста на Python](https://www.amazon.com/Programming-Language-Former-Python-Developers/dp/B08M83X6N8)
 
 ---
 
