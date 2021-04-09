@@ -14,6 +14,7 @@
 * [de_window (кроссплатформенное создание окна с OpenGL)](https://github.com/devisualization/window)
 * [ArmageddonEngine](https://github.com/CyberShadow/ae)
 * [Dagon](https://github.com/gecko0307/dagon)
+* [Æsir](https://github.com/Temtaime/aesir)
 * [dmech](https://github.com/gecko0307/dmech)
 * [LibertyEngine](https://github.com/GabyForceQ/LibertyEngine)
 * [retrograde](https://github.com/mbierlee/retrograde)
