@@ -89,9 +89,9 @@ auto point = ["x": 0.52, "y": 42, "z": 1.3];
 
 ### Итерация
 ```python
-for key, value in my_dict.items():
+for value in my_dict.items():
     pass
-for key, value in my_dict.keys():
+for key in my_dict.keys():
     pass
 for key, value in my_dict.items():
     pass
