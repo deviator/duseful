@@ -26,6 +26,8 @@ https://github.com/vladdeSV/scone
 
 https://github.com/zyedidia/termbox-d
 
+https://github.com/D-Programming-Deimos/ncurses
+
 ## GUI
 
 [Пример использования GTK](/examples/simple/gtk)
