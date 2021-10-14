@@ -26,6 +26,8 @@ https://github.com/vladdeSV/scone
 
 https://github.com/zyedidia/termbox-d
 
+https://github.com/D-Programming-Deimos/ncurses
+
 ## GUI
 
 [Пример использования GTK](/examples/simple/gtk)
@@ -47,3 +49,5 @@ https://github.com/MrSmith33/anchovy
 [биндинг libui](https://github.com/mogud/libuid)
 
 [биндинг nuklear](https://github.com/mogud/nukleard)
+
+[порт imgui](https://github.com/d-gamedev-team/dimgui)
